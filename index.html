@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="mainflex">
+        <div class="playersection">
+            <div class="playername text">name</div>
+            <div class="playerscore text">score</div>
+            <div class="buttonsbox">
+                <div class="buttonsrow">
+                    <button class="xobutton 1">X</button>
+                    <button class="xobutton 2">X</button>
+                    <button class="xobutton 3">X</button>
+                </div>
+                <div class="buttonsrow">
+                    <button class="xobutton 4">X</button>
+                    <button class="xobutton 5">X</button>
+                    <button class="xobutton 6">X</button>
+                </div>
+                <div class="buttonsrow">
+                    <button class="xobutton 7">X</button>
+                    <button class="xobutton 8">X</button>
+                    <button class="xobutton 9">X</button>
+                </div>
+            </div>
+        </div>
+        <div class="gamesection">
+            <div class="title">Welcome to Tic Tac Toe</div>
+            <div class="gamebox">
+                <div class="gamerow">
+                    <div class="xoinput"></div>
+                    <div class="xoinput"></div>
+                    <div class="xoinput"></div>
+                </div>
+                <div class="gamerow">
+                    <div class="xoinput"></div>
+                    <div class="xoinput"></div>
+                    <div class="xoinput"></div>
+                </div>
+                <div class="gamerow">
+                    <div class="xoinput"></div>
+                    <div class="xoinput"></div>
+                    <div class="xoinput"></div>
+                </div>
+            </div>
+        </div>
+        <div class="playersection">
+            <div class="playername text">name</div>
+            <div class="playerscore text">score</div>
+            <div class="buttonsbox">
+                <div class="buttonsrow">
+                    <button class="xobutton 1">O</button>
+                    <button class="xobutton 2">O</button>
+                    <button class="xobutton 3">O</button>
+                </div>
+                <div class="buttonsrow">
+                    <button class="xobutton 4">O</button>
+                    <button class="xobutton 5">O</button>
+                    <button class="xobutton 6">O</button>
+                </div>
+                <div class="buttonsrow">
+                    <button class="xobutton 7">O</button>
+                    <button class="xobutton 8">O</button>
+                    <button class="xobutton 9">O</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inputsection">
+        <div class="playerinput">
+            <div class="playernameinput">
+                <input class="player1name" placeholder="Enter Player 1 Name">
+                <button>Submit</button>
+            </div>
+            <div class="playersymbolinput">
+                <input class="player1symbol" placeholder="choose X or O">
+                <button>Submit</button>
+            </div>
+            <div class="playersymbolselect">
+                <select name="player2symbolselect">
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+                <button>Submit</button>
+            </div>
+        </div>
+        <div class="playerinput">
+            <div class="playernameinput">
+                <input class="player2name" placeholder="Enter Player 2 Name">
+                <button>Submit</button>
+            </div>
+            <div class="playersymbolinput">
+                <input class="player2symbol" placeholder="choose X or O">
+                <button>Submit</button>
+            </div>
+            <div class="playersymbolselect">
+                <select name="player2symbolselect">
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+                <button>Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>

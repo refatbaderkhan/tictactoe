@@ -1,0 +1,66 @@
+.mainflex {
+    display: flex;
+    width: 100%;
+    margin: 50px 0;
+    justify-content: space-around;
+}
+
+.playersection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.xobutton {
+    width: 30px;
+    height: 30px;
+}
+
+
+.text {
+    text-align: center;
+}
+
+.gamebox {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gamerow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.xoinput {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: solid 2px;
+    border-color: black;
+}
+
+.inputsection {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.playerinput {
+    display: flex;
+    flex-direction: column;
+}
+
+.playernameinput {
+    display: flex;
+}
+
+.playersymbolinput {
+    display: flex;
+}
