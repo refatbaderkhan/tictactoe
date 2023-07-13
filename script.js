@@ -1,4 +1,35 @@
 
+let playerxname = document.getElementById('playerxname')
+let playeroname = document.getElementById('playeroname')
+let player1nameinput = document.getElementById('player1nameinput')
+let player2nameinput = document.getElementById('player2nameinput')
+let player1symbolselect = document.querySelector('#player1symbolselect')
+let player2symbolselect = document.querySelector('#player2symbolselect')
+let player2symbolselection = player2symbolselect.value
+let submitdata1 = document.getElementById('submitdata1')
+let submitdata2 = document.getElementById('submitdata2')
+
+submitdata1.addEventListener('click', function() {
+  let player1symbolselection = player1symbolselect.value;
+  if (player1symbolselection === 'X') {
+    playerxname.innerText = player1nameinput.value;
+  }
+  if (player1symbolselection === 'O') {
+    playeroname.innerText = player1nameinput.value;
+  }
+})
+
+submitdata2.addEventListener('click', function() {
+    let player2symbolselection = player2symbolselect.value;
+    if (player2symbolselection === 'X') {
+      playerxname.innerText = player2nameinput.value;
+    }
+    if (player2symbolselection === 'O') {
+      playeroname.innerText = player2nameinput.value;
+    }
+  })
+
+
 //assigning variables to X buttons
 let x1 = document.getElementById('x1')
 let x2 = document.getElementById('x2')
