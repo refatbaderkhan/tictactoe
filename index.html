@@ -11,23 +11,23 @@
 <body>
     <div class="mainflex">
         <div class="playersection">
-            <div class="playername text">name</div>
+            <div class="playername text" id="playerxname">name</div>
             <div class="playerscore text">score</div>
             <div class="buttonsbox">
                 <div class="buttonsrow">
-                    <button class="xobutton 1">X</button>
-                    <button class="xobutton 2">X</button>
-                    <button class="xobutton 3">X</button>
+                    <button class="xobutton 1" id="x1">X</button>
+                    <button class="xobutton 2" id="x2">X</button>
+                    <button class="xobutton 3" id="x3">X</button>
                 </div>
                 <div class="buttonsrow">
-                    <button class="xobutton 4">X</button>
-                    <button class="xobutton 5">X</button>
-                    <button class="xobutton 6">X</button>
+                    <button class="xobutton 4" id="x4">X</button>
+                    <button class="xobutton 5" id="x5">X</button>
+                    <button class="xobutton 6" id="x6">X</button>
                 </div>
                 <div class="buttonsrow">
-                    <button class="xobutton 7">X</button>
-                    <button class="xobutton 8">X</button>
-                    <button class="xobutton 9">X</button>
+                    <button class="xobutton 7" id="x7">X</button>
+                    <button class="xobutton 8" id="x8">X</button>
+                    <button class="xobutton 9" id="x9">X</button>
                 </div>
             </div>
         </div>
@@ -35,40 +35,40 @@
             <div class="title">Welcome to Tic Tac Toe</div>
             <div class="gamebox">
                 <div class="gamerow">
-                    <div class="xoinput"></div>
-                    <div class="xoinput"></div>
-                    <div class="xoinput"></div>
+                    <div class="xoinput" id="gap1"></div>
+                    <div class="xoinput" id="gap2"></div>
+                    <div class="xoinput" id="gap3"></div>
                 </div>
                 <div class="gamerow">
-                    <div class="xoinput"></div>
-                    <div class="xoinput"></div>
-                    <div class="xoinput"></div>
+                    <div class="xoinput" id="gap4"></div>
+                    <div class="xoinput" id="gap5"></div>
+                    <div class="xoinput" id="gap6"></div>
                 </div>
                 <div class="gamerow">
-                    <div class="xoinput"></div>
-                    <div class="xoinput"></div>
-                    <div class="xoinput"></div>
+                    <div class="xoinput" id="gap7"></div>
+                    <div class="xoinput" id="gap8"></div>
+                    <div class="xoinput" id="gap9"></div>
                 </div>
             </div>
         </div>
         <div class="playersection">
-            <div class="playername text">name</div>
+            <div class="playername text"id="playeroname">name</div>
             <div class="playerscore text">score</div>
             <div class="buttonsbox">
                 <div class="buttonsrow">
-                    <button class="xobutton 1">O</button>
-                    <button class="xobutton 2">O</button>
-                    <button class="xobutton 3">O</button>
+                    <button class="xobutton 1" id="o1">O</button>
+                    <button class="xobutton 2" id="o2">O</button>
+                    <button class="xobutton 3" id="o3">O</button>
                 </div>
                 <div class="buttonsrow">
-                    <button class="xobutton 4">O</button>
-                    <button class="xobutton 5">O</button>
-                    <button class="xobutton 6">O</button>
+                    <button class="xobutton 4" id="o4">O</button>
+                    <button class="xobutton 5" id="o5">O</button>
+                    <button class="xobutton 6" id="o6">O</button>
                 </div>
                 <div class="buttonsrow">
-                    <button class="xobutton 7">O</button>
-                    <button class="xobutton 8">O</button>
-                    <button class="xobutton 9">O</button>
+                    <button class="xobutton 7" id="o7">O</button>
+                    <button class="xobutton 8" id="o8">O</button>
+                    <button class="xobutton 9" id="o9">O</button>
                 </div>
             </div>
         </div>
@@ -77,35 +77,31 @@
         <div class="playerinput">
             <div class="playernameinput">
                 <input class="player1name" placeholder="Enter Player 1 Name">
-                <button>Submit</button>
             </div>
             <div class="playersymbolinput">
                 <input class="player1symbol" placeholder="choose X or O">
-                <button>Submit</button>
             </div>
             <div class="playersymbolselect">
-                <select name="player2symbolselect">
+                <select name="player1symbolselect">
                     <option value="X">X</option>
                     <option value="O">O</option>
                 </select>
-                <button>Submit</button>
+                <button class="submitdata">Submit</button>
             </div>
         </div>
         <div class="playerinput">
             <div class="playernameinput">
                 <input class="player2name" placeholder="Enter Player 2 Name">
-                <button>Submit</button>
             </div>
             <div class="playersymbolinput">
                 <input class="player2symbol" placeholder="choose X or O">
-                <button>Submit</button>
             </div>
             <div class="playersymbolselect">
                 <select name="player2symbolselect">
                     <option value="X">X</option>
                     <option value="O">O</option>
                 </select>
-                <button>Submit</button>
+                <button class="submitdata">Submit</button>
             </div>
         </div>
     </div>
