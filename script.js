@@ -62,6 +62,7 @@ let gap6 = document.getElementById('gap6')
 let gap7 = document.getElementById('gap7')
 let gap8 = document.getElementById('gap8')
 let gap9 = document.getElementById('gap9')
+let gaps = [gap1,gap2,gap3,gap4,gap5,gap6,gap7,gap8,gap9]
 //adding functionality to X1 and O1 Buttons
 x1.addEventListener('click', function() {
     if (!gap1.innerText) {
@@ -180,38 +181,48 @@ o9.addEventListener('click', function() {
     }
 })
 
-
-  // winning condition
-  function checkLine() {
-    if (
-      (gap1.innerText === "X" && gap2.innerText === "X" && gap3.innerText === "X") ||
-      (gap1.innerText === "X" && gap5.innerText === "X" && gap9.innerText === "X") ||
-      (gap1.innerText === "X" && gap4.innerText === "X" && gap7.innerText === "X") ||
-      (gap2.innerText === "X" && gap5.innerText === "X" && gap8.innerText === "X") ||
-      (gap3.innerText === "X" && gap6.innerText === "X" && gap9.innerText === "X") ||
-      (gap3.innerText === "X" && gap5.innerText === "X" && gap7.innerText === "X") ||
-      (gap4.innerText === "X" && gap5.innerText === "X" && gap6.innerText === "X") ||
-      (gap7.innerText === "X" && gap8.innerText === "X" && gap9.innerText === "X")
-    ) {
-      counterX++;
-      clearGrid();
-    } else if (
-      (gap1.innerText === "O" && gap2.innerText === "O" && gap3.innerText === "O") ||
-      (gap1.innerText === "O" && gap5.innerText === "O" && gap9.innerText === "O") ||
-      (gap1.innerText === "O" && gap4.innerText === "O" && gap7.innerText === "O") ||
-      (gap2.innerText === "O" && gap5.innerText === "O" && gap8.innerText === "O") ||
-      (gap3.innerText === "O" && gap6.innerText === "O" && gap9.innerText === "O") ||
-      (gap3.innerText === "O" && gap5.innerText === "O" && gap7.innerText === "O") ||
-      (gap4.innerText === "O" && gap5.innerText === "O" && gap6.innerText === "O") ||
-      (gap7.innerText === "O" && gap8.innerText === "O" && gap9.innerText === "O")
-    ) {
-      counterO++;
-      clearGrid();
+//draw Function
+function fullGaps() {
+    for (let i = 0; i < gaps.length; i++){
+        if (gaps[i].innerText === "") {
+            return false;
+        }
     }
+    return true;
+}
 
-    playerxscore.innerText = counterX;
-    playeroscore.innerText = counterO;
-  }
+//winning condition
+function checkLine() {
+ if (
+   (gap1.innerText === "X" && gap2.innerText === "X" && gap3.innerText === "X") ||
+   (gap1.innerText === "X" && gap5.innerText === "X" && gap9.innerText === "X") ||
+   (gap1.innerText === "X" && gap4.innerText === "X" && gap7.innerText === "X") ||
+   (gap2.innerText === "X" && gap5.innerText === "X" && gap8.innerText === "X") ||
+   (gap3.innerText === "X" && gap6.innerText === "X" && gap9.innerText === "X") ||
+   (gap3.innerText === "X" && gap5.innerText === "X" && gap7.innerText === "X") ||
+   (gap4.innerText === "X" && gap5.innerText === "X" && gap6.innerText === "X") ||
+   (gap7.innerText === "X" && gap8.innerText === "X" && gap9.innerText === "X")
+ ) {
+   counterX++;
+   clearGrid();
+ } else if (
+   (gap1.innerText === "O" && gap2.innerText === "O" && gap3.innerText === "O") ||
+   (gap1.innerText === "O" && gap5.innerText === "O" && gap9.innerText === "O") ||
+   (gap1.innerText === "O" && gap4.innerText === "O" && gap7.innerText === "O") ||
+   (gap2.innerText === "O" && gap5.innerText === "O" && gap8.innerText === "O") ||
+   (gap3.innerText === "O" && gap6.innerText === "O" && gap9.innerText === "O") ||
+   (gap3.innerText === "O" && gap5.innerText === "O" && gap7.innerText === "O") ||
+   (gap4.innerText === "O" && gap5.innerText === "O" && gap6.innerText === "O") ||
+   (gap7.innerText === "O" && gap8.innerText === "O" && gap9.innerText === "O")
+ ) {
+   counterO++;
+   clearGrid();
+ } else if (fullGaps()) {
+    clearGrid();
+ }
+ playerxscore.innerText = counterX;
+ playeroscore.innerText = counterO;
+}
 
 //clear grid function:
 function clearGrid() {
