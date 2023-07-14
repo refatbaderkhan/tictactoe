@@ -1,5 +1,10 @@
 //Assiging variables to players names and apply input and select submit
 let playerxname = document.getElementById('playerxname')
+let playerxscore = document.getElementById('playerxscore')
+let counterX = 0
+playerxscore.innerText = counterX
+let counterO = 0
+playeroscore.innerText = counterO
 let playeroname = document.getElementById('playeroname')
 let player1nameinput = document.getElementById('player1nameinput')
 let player2nameinput = document.getElementById('player2nameinput')
@@ -175,6 +180,72 @@ o9.addEventListener('click', function() {
     }
 })
 
+
+//adding X player winning condition
+function checkLine() {
+    if (gap1.innerText === "X" && gap2.innerText === "X" && gap3.innerText === "X") {
+        counterX++;
+        clearGrid();
+    } else if (gap1.innerText === "X" && gap5.innerText === "X" && gap9.innerText === "X") {
+        counterX++;
+        clearGrid();
+    } else if (gap1.innerText === "X" && gap4.innerText === "X" && gap7.innerText === "X") {
+        counterX++;
+        clearGrid();
+    } else if (gap2.innerText === "X" && gap5.innerText === "X" && gap8.innerText === "X") {
+        counterX++;
+        clearGrid();
+    } else if (gap3.innerText === "X" && gap6.innerText === "X" && gap9.innerText === "X") {
+        counterX++;
+        clearGrid();
+    } else if (gap3.innerText === "X" && gap5.innerText === "X" && gap7.innerText === "X") {
+        counterX++;
+        clearGrid();
+    } else if (gap4.innerText === "X" && gap5.innerText === "X" && gap6.innerText === "X") {
+        counterX++;
+        clearGrid();
+    } else if (gap7.innerText === "X" && gap8.innerText === "X" && gap9.innerText === "X") {
+        counterX++;
+        clearGrid();
+    }
+
+    playerxscore.innerText = counterX;
+
+}
+
+//adding O player winning condition
+function checkLine() {
+    if (gap1.innerText === "O" && gap2.innerText === "O" && gap3.innerText === "O") {
+        counterO++;
+        clearGrid();
+    } else if (gap1.innerText === "O" && gap5.innerText === "O" && gap9.innerText === "O") {
+        counterO++;
+        clearGrid();
+    } else if (gap1.innerText === "O" && gap4.innerText === "O" && gap7.innerText === "O") {
+        counterO++;
+        clearGrid();
+    } else if (gap2.innerText === "O" && gap5.innerText === "O" && gap8.innerText === "O") {
+        counterO++;
+        clearGrid();
+    } else if (gap3.innerText === "O" && gap6.innerText === "O" && gap9.innerText === "O") {
+        counterO++;
+        clearGrid();
+    } else if (gap3.innerText === "O" && gap5.innerText === "O" && gap7.innerText === "O") {
+        counterO++;
+        clearGrid();
+    } else if (gap4.innerText === "O" && gap5.innerText === "O" && gap6.innerText === "O") {
+        counterO++;
+        clearGrid();
+    } else if (gap7.innerText === "O" && gap8.innerText === "O" && gap9.innerText === "O") {
+        counterO++;
+        clearGrid();
+    }
+
+    playeroscore.innerText = counterO;
+
+}
+
+
 //clear grid function:
 function clearGrid() {
     gap1.innerText = "";
@@ -189,26 +260,3 @@ function clearGrid() {
 }
 
 
-//adding X player winning condition
-let counterX = 0
-function checkLine() {
-    if (gap1.innerText === "X" && gap2.innerText === "X" && gap3.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap1.innerText === "X" && gap5.innerText === "X" && gap9.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap1.innerText === "X" && gap4.innerText === "X" && gap7.innerText === "X") {
-        counterX++;
-    } else if (gap2.innerText === "X" && gap5.innerText === "X" && gap8.innerText === "X") {
-        counterX++;
-    } else if (gap3.innerText === "X" && gap6.innerText === "X" && gap9.innerText === "X") {
-        counterX++;
-    } else if (gap3.innerText === "X" && gap5.innerText === "X" && gap7.innerText === "X") {
-        counterX++;
-    } else if (gap4.innerText === "X" && gap5.innerText === "X" && gap6.innerText === "X") {
-        counterX++;
-    } else if (gap7.innerText === "X" && gap8.innerText === "X" && gap9.innerText === "X") {
-        counterX++;
-    }
-}
