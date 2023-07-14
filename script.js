@@ -175,23 +175,40 @@ o9.addEventListener('click', function() {
     }
 })
 
+//clear grid function:
+function clearGrid() {
+    gap1.innerText = "";
+    gap2.innerText = "";
+    gap3.innerText = "";
+    gap4.innerText = "";
+    gap5.innerText = "";
+    gap6.innerText = "";
+    gap7.innerText = "";
+    gap8.innerText = "";
+    gap9.innerText = "";
+}
+
+
 //adding X player winning condition
+let counterX = 0
 function checkLine() {
     if (gap1.innerText === "X" && gap2.innerText === "X" && gap3.innerText === "X") {
-        console.log('equal row');
+        counterX++;
+        clearGrid();
     } else if (gap1.innerText === "X" && gap5.innerText === "X" && gap9.innerText === "X") {
-        console.log('equal row');
+        counterX++;
+        clearGrid();
     } else if (gap1.innerText === "X" && gap4.innerText === "X" && gap7.innerText === "X") {
-        console.log('equal row');
+        counterX++;
     } else if (gap2.innerText === "X" && gap5.innerText === "X" && gap8.innerText === "X") {
-        console.log('equal row');
+        counterX++;
     } else if (gap3.innerText === "X" && gap6.innerText === "X" && gap9.innerText === "X") {
-        console.log('equal row');
+        counterX++;
     } else if (gap3.innerText === "X" && gap5.innerText === "X" && gap7.innerText === "X") {
-        console.log('equal row');
+        counterX++;
     } else if (gap4.innerText === "X" && gap5.innerText === "X" && gap6.innerText === "X") {
-        console.log('equal row');
+        counterX++;
     } else if (gap7.innerText === "X" && gap8.innerText === "X" && gap9.innerText === "X") {
-        console.log('equal row');
+        counterX++;
     }
 }
