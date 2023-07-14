@@ -181,70 +181,37 @@ o9.addEventListener('click', function() {
 })
 
 
-//adding X player winning condition
-function checkLine() {
-    if (gap1.innerText === "X" && gap2.innerText === "X" && gap3.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap1.innerText === "X" && gap5.innerText === "X" && gap9.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap1.innerText === "X" && gap4.innerText === "X" && gap7.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap2.innerText === "X" && gap5.innerText === "X" && gap8.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap3.innerText === "X" && gap6.innerText === "X" && gap9.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap3.innerText === "X" && gap5.innerText === "X" && gap7.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap4.innerText === "X" && gap5.innerText === "X" && gap6.innerText === "X") {
-        counterX++;
-        clearGrid();
-    } else if (gap7.innerText === "X" && gap8.innerText === "X" && gap9.innerText === "X") {
-        counterX++;
-        clearGrid();
+  // winning condition
+  function checkLine() {
+    if (
+      (gap1.innerText === "X" && gap2.innerText === "X" && gap3.innerText === "X") ||
+      (gap1.innerText === "X" && gap5.innerText === "X" && gap9.innerText === "X") ||
+      (gap1.innerText === "X" && gap4.innerText === "X" && gap7.innerText === "X") ||
+      (gap2.innerText === "X" && gap5.innerText === "X" && gap8.innerText === "X") ||
+      (gap3.innerText === "X" && gap6.innerText === "X" && gap9.innerText === "X") ||
+      (gap3.innerText === "X" && gap5.innerText === "X" && gap7.innerText === "X") ||
+      (gap4.innerText === "X" && gap5.innerText === "X" && gap6.innerText === "X") ||
+      (gap7.innerText === "X" && gap8.innerText === "X" && gap9.innerText === "X")
+    ) {
+      counterX++;
+      clearGrid();
+    } else if (
+      (gap1.innerText === "O" && gap2.innerText === "O" && gap3.innerText === "O") ||
+      (gap1.innerText === "O" && gap5.innerText === "O" && gap9.innerText === "O") ||
+      (gap1.innerText === "O" && gap4.innerText === "O" && gap7.innerText === "O") ||
+      (gap2.innerText === "O" && gap5.innerText === "O" && gap8.innerText === "O") ||
+      (gap3.innerText === "O" && gap6.innerText === "O" && gap9.innerText === "O") ||
+      (gap3.innerText === "O" && gap5.innerText === "O" && gap7.innerText === "O") ||
+      (gap4.innerText === "O" && gap5.innerText === "O" && gap6.innerText === "O") ||
+      (gap7.innerText === "O" && gap8.innerText === "O" && gap9.innerText === "O")
+    ) {
+      counterO++;
+      clearGrid();
     }
 
     playerxscore.innerText = counterX;
-
-}
-
-//adding O player winning condition
-function checkLine() {
-    if (gap1.innerText === "O" && gap2.innerText === "O" && gap3.innerText === "O") {
-        counterO++;
-        clearGrid();
-    } else if (gap1.innerText === "O" && gap5.innerText === "O" && gap9.innerText === "O") {
-        counterO++;
-        clearGrid();
-    } else if (gap1.innerText === "O" && gap4.innerText === "O" && gap7.innerText === "O") {
-        counterO++;
-        clearGrid();
-    } else if (gap2.innerText === "O" && gap5.innerText === "O" && gap8.innerText === "O") {
-        counterO++;
-        clearGrid();
-    } else if (gap3.innerText === "O" && gap6.innerText === "O" && gap9.innerText === "O") {
-        counterO++;
-        clearGrid();
-    } else if (gap3.innerText === "O" && gap5.innerText === "O" && gap7.innerText === "O") {
-        counterO++;
-        clearGrid();
-    } else if (gap4.innerText === "O" && gap5.innerText === "O" && gap6.innerText === "O") {
-        counterO++;
-        clearGrid();
-    } else if (gap7.innerText === "O" && gap8.innerText === "O" && gap9.innerText === "O") {
-        counterO++;
-        clearGrid();
-    }
-
     playeroscore.innerText = counterO;
-
-}
-
+  }
 
 //clear grid function:
 function clearGrid() {
