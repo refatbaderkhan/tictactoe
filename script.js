@@ -60,100 +60,138 @@ let gap9 = document.getElementById('gap9')
 //adding functionality to X1 and O1 Buttons
 x1.addEventListener('click', function() {
     if (!gap1.innerText) {
-    gap1.innerText = "X";
+        gap1.innerText = "X";
+        checkLine();
     }
 })
 o1.addEventListener('click', function() {
     if (!gap1.innerText) {
-    gap1.innerText = "O";
+        gap1.innerText = "O";
+        checkLine();
     }
 })
 //adding functionality to X2 and O2 Buttons
 x2.addEventListener('click', function() {
     if (!gap2.innerText) {
-    gap2.innerText = "X";
+        gap2.innerText = "X";
+        checkLine();
     }
 })
 o2.addEventListener('click', function() {
     if (!gap2.innerText) {
-    gap2.innerText = "O";
+        gap2.innerText = "O";
+        checkLine();
     }
 })
 //adding functionality to X3 and O3 Buttons
 x3.addEventListener('click', function() {
     if (!gap3.innerText) {
-    gap3.innerText = "X";
+        gap3.innerText = "X";
+        checkLine();
     }
 })
 o3.addEventListener('click', function() {
     if (!gap3.innerText) {
-    gap3.innerText = "O";
+        gap3.innerText = "O";
+        checkLine();
     }
 })
 //adding functionality to X4 and O4 Buttons
 x4.addEventListener('click', function() {
     if (!gap4.innerText) {
-    gap4.innerText = "X";
+        gap4.innerText = "X";
+        checkLine();
     }
 })
 o4.addEventListener('click', function() {
     if (!gap4.innerText) {
-    gap4.innerText = "O";
+        gap4.innerText = "O";
+        checkLine();
     }
 })
 //adding functionality to X5 and O5 Buttons
 x5.addEventListener('click', function() {
     if (!gap5.innerText) {
-    gap5.innerText = "X";
+        gap5.innerText = "X";
+        checkLine();
     }
 })
 o5.addEventListener('click', function() {
     if (!gap5.innerText) {
-    gap5.innerText = "O";
+        gap5.innerText = "O";
+        checkLine();
     }
 })
 //adding functionality to X6 and O6 Buttons
 x6.addEventListener('click', function() {
     if (!gap6.innerText) {
-    gap6.innerText = "X";
+        gap6.innerText = "X";
+        checkLine();
     }
 })
 o6.addEventListener('click', function() {
     if (!gap6.innerText) {
-    gap6.innerText = "O";
+        gap6.innerText = "O";
+        checkLine();
     }
 })
 //adding functionality to X7 and O7 Buttons
 x7.addEventListener('click', function() {
     if (!gap7.innerText) {
-    gap7.innerText = "X";
+        gap7.innerText = "X";
+        checkLine();
     }
 })
 o7.addEventListener('click', function() {
     if (!gap7.innerText) {
-    gap7.innerText = "O";
+        gap7.innerText = "O";
+        checkLine();
     }
 })
 //adding functionality to X8 and O8 Buttons
 x8.addEventListener('click', function() {
     if (!gap8.innerText) {
-    gap8.innerText = "X";
+        gap8.innerText = "X";
+        checkLine();
     }
 })
 o8.addEventListener('click', function() {
     if (!gap8.innerText) {
-    gap8.innerText = "O";
+        gap8.innerText = "O";
+        checkLine();
     }
 })
 //adding functionality to X9 and O9 Buttons
 x9.addEventListener('click', function() {
     if (!gap9.innerText) {
-    gap9.innerText = "X";
+        gap9.innerText = "X";
+        checkLine();
     }
 })
 o9.addEventListener('click', function() {
     if (!gap9.innerText) {
-    gap9.innerText = "O";
+        gap9.innerText = "O";
+        checkLine();
     }
 })
 
+//adding X player winning condition
+function checkLine() {
+    if (gap1.innerText === "X" && gap2.innerText === "X" && gap3.innerText === "X") {
+        console.log('equal row');
+    } else if (gap1.innerText === "X" && gap5.innerText === "X" && gap9.innerText === "X") {
+        console.log('equal row');
+    } else if (gap1.innerText === "X" && gap4.innerText === "X" && gap7.innerText === "X") {
+        console.log('equal row');
+    } else if (gap2.innerText === "X" && gap5.innerText === "X" && gap8.innerText === "X") {
+        console.log('equal row');
+    } else if (gap3.innerText === "X" && gap6.innerText === "X" && gap9.innerText === "X") {
+        console.log('equal row');
+    } else if (gap3.innerText === "X" && gap5.innerText === "X" && gap7.innerText === "X") {
+        console.log('equal row');
+    } else if (gap4.innerText === "X" && gap5.innerText === "X" && gap6.innerText === "X") {
+        console.log('equal row');
+    } else if (gap7.innerText === "X" && gap8.innerText === "X" && gap9.innerText === "X") {
+        console.log('equal row');
+    }
+}
